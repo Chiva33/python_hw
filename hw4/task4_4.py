@@ -17,8 +17,6 @@ def get_res(n):
     list = [str(randint(0, 100)) + 'x^' + str(n) + ' + ' for n in range(n, -1, -1)]
     list_str = reduce(lambda x, y: x + y, list)
     list_str = list_str.replace("x^0", "")
-    list_str = list_str.replace("^1", "")
-    list_str = list_str.replace("1x", "x")
     return list_str[: -3] + ' = 0'
 
 print(get_res(n))
